@@ -1,39 +1,39 @@
 [gd_scene format=3 uid="uid://rvkh6jyyfax3"]
 
-[ext_resource type="Texture2D" uid="uid://rojivu3rw05v" path="res://img/control btn.png" id="1_06t4h"]
-[ext_resource type="Script" uid="uid://b7ctal08ootte" path="res://main_menu.gd" id="1_8qtwp"]
-[ext_resource type="Texture2D" uid="uid://cgyjaici3uvs3" path="res://img/home screen.png" id="1_glbon"]
-[ext_resource type="Texture2D" uid="uid://bljoxvri3gwxk" path="res://img/control btn red.png" id="3_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://dned6smokh6y8" path="res://img/play btn.png" id="4_glbon"]
-[ext_resource type="Texture2D" uid="uid://b8hevyegbxpnd" path="res://img/play btn red.png" id="5_nlkkf"]
-[ext_resource type="Texture2D" uid="uid://dtnpie8jrmtf2" path="res://img/credits.png" id="6_qe12f"]
-[ext_resource type="Texture2D" uid="uid://cirhvp5ospstk" path="res://img/credits red.png" id="7_8qtwp"]
+[ext_resource type="Script" uid="uid://b7ctal08ootte" path="res://home_screen.gd" id="1_o6h2m"]
+[ext_resource type="Texture2D" uid="uid://cgyjaici3uvs3" path="res://img/home screen.png" id="2_ckqhc"]
+[ext_resource type="Texture2D" uid="uid://rojivu3rw05v" path="res://img/control btn.png" id="3_2352u"]
+[ext_resource type="Texture2D" uid="uid://bljoxvri3gwxk" path="res://img/control btn red.png" id="4_1fxkl"]
+[ext_resource type="Texture2D" uid="uid://dned6smokh6y8" path="res://img/play btn.png" id="5_jh6v6"]
+[ext_resource type="Texture2D" uid="uid://b8hevyegbxpnd" path="res://img/play btn red.png" id="6_s47f5"]
+[ext_resource type="Texture2D" uid="uid://dtnpie8jrmtf2" path="res://img/credits.png" id="7_ikjqu"]
+[ext_resource type="Texture2D" uid="uid://cirhvp5ospstk" path="res://img/credits red.png" id="8_4kdek"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ujqu"]
-texture = ExtResource("1_glbon")
+texture = ExtResource("2_ckqhc")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
-texture = ExtResource("1_06t4h")
+texture = ExtResource("3_2352u")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
-texture = ExtResource("3_fu7sn")
+texture = ExtResource("4_1fxkl")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
-texture = ExtResource("4_glbon")
+texture = ExtResource("5_jh6v6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
-texture = ExtResource("5_nlkkf")
+texture = ExtResource("6_s47f5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rw4b"]
-texture = ExtResource("6_qe12f")
+texture = ExtResource("7_ikjqu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ew17x"]
-texture = ExtResource("7_8qtwp")
+texture = ExtResource("8_4kdek")
 
-[node name="MainMenu" type="Control" unique_id=1586604237]
+[node name="Home Screen" type="Control" unique_id=1586604237]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_8qtwp")
+script = ExtResource("1_o6h2m")
 
 [node name="Panel" type="Panel" parent="." unique_id=2059986857]
 layout_mode = 0

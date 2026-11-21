@@ -5,7 +5,7 @@ const HIGHEST_NOTE = 99
 
 const LANE_X = [326.0, 426.0, 626.0, 726.0]
 const SPAWN_Y = -50.0
-const HIT_Y = 560.0
+const HIT_Y = 800.0
 const FALL_TIME = 2.0
 const PERFECT_PX = 20.0
 
