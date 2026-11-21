@@ -22,7 +22,7 @@ var combo := 0
 @onready var judge_label = $ui/Judge
 
 func _ready():
-	midi.note_offset = FALL_TIME
+	midi.note_offset = -FALL_TIME
 	midi.link_audio_stream_player([music])
 	midi.note.connect(_on_midi_note)
 	midi.play()
@@ -75,7 +75,7 @@ func register(result):
 		"Good":
 			score += 100
 			combo += 1
-		"Mis...":
+		"Miss...":
 			combo = 0
 	judge_label.text = result
 	score_label.text = "Score: %d" % score

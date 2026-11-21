@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://rvkh6jyyfax3"]
+
+[ext_resource type="Texture2D" uid="uid://rojivu3rw05v" path="res://img/control btn.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://b7ctal08ootte" path="res://main_menu.gd" id="1_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://cgyjaici3uvs3" path="res://img/home screen.png" id="1_glbon"]
+[ext_resource type="Texture2D" uid="uid://bljoxvri3gwxk" path="res://img/control btn red.png" id="3_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://dned6smokh6y8" path="res://img/play btn.png" id="4_glbon"]
+[ext_resource type="Texture2D" uid="uid://b8hevyegbxpnd" path="res://img/play btn red.png" id="5_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://dtnpie8jrmtf2" path="res://img/credits.png" id="6_qe12f"]
+[ext_resource type="Texture2D" uid="uid://cirhvp5ospstk" path="res://img/credits red.png" id="7_8qtwp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ujqu"]
+texture = ExtResource("1_glbon")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
+texture = ExtResource("1_06t4h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
+texture = ExtResource("3_fu7sn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
+texture = ExtResource("4_glbon")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
+texture = ExtResource("5_nlkkf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rw4b"]
+texture = ExtResource("6_qe12f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ew17x"]
+texture = ExtResource("7_8qtwp")
+
+[node name="MainMenu" type="Control" unique_id=1586604237]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8qtwp")
+
+[node name="Panel" type="Panel" parent="." unique_id=2059986857]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1023.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1ujqu")
+
+[node name="control" type="Button" parent="." unique_id=544547415]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 648.0
+offset_right = 678.0
+offset_bottom = 742.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fu7sn")
+
+[node name="play" type="Button" parent="." unique_id=610840225]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 647.0
+offset_right = 992.0
+offset_bottom = 741.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_glbon")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nlkkf")
+
+[node name="credits" type="Button" parent="." unique_id=1148454878]
+layout_mode = 0
+offset_left = 1273.0
+offset_top = 953.0
+offset_right = 1406.0
+offset_bottom = 1005.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_5rw4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ew17x")
+
+[connection signal="pressed" from="control" to="." method="_on_control_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]

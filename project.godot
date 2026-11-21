@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="Frozen Rhythm Game"
-run/main_scene="uid://dl6b1u84m7yvx"
+run/main_scene="uid://rvkh6jyyfax3"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1440
+window/size/viewport_height=1024
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
