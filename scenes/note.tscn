@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://t75vgb821soj"]
+
+[ext_resource type="Script" uid="uid://bpkiqndqog7os" path="res://scenes/note.gd" id="1_t3yvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ujqu"]
+size = Vector2(80, 80)
+
+[node name="Note" type="Area2D" unique_id=1550997043]
+script = ExtResource("1_t3yvt")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1712225454]
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1591993952]
+shape = SubResource("RectangleShape2D_1ujqu")

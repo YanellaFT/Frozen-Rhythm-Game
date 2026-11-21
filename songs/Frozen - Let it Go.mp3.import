@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c058iu28d837g"
+path="res://.godot/imported/Frozen - Let it Go.mp3-fa1e0602a0ef3ae47f520fb907be0bf7.mp3str"
+
+[deps]
+
+source_file="res://songs/Frozen - Let it Go.mp3"
+dest_files=["res://.godot/imported/Frozen - Let it Go.mp3-fa1e0602a0ef3ae47f520fb907be0bf7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

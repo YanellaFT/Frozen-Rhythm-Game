@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dl6b1u84m7yvx"]
+
+[ext_resource type="MidiResource" uid="uid://bakc6f4qmmuhx" path="res://songs/Frozen - Let it Go.mid" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://cjpl5dspsjjbb" path="res://scenes/main.gd" id="1_sugp2"]
+[ext_resource type="AudioStream" uid="uid://c058iu28d837g" path="res://songs/Frozen - Let it Go.mp3" id="2_sugp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ujqu"]
+size = Vector2(80, 120)
+
+[node name="main" type="Node2D" unique_id=588996212]
+script = ExtResource("1_sugp2")
+
+[node name="MidiPlayer" type="MidiPlayer" parent="." unique_id=235382925]
+midi = ExtResource("1_0wfyh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1224227670]
+stream = ExtResource("2_sugp2")
+
+[node name="hitzones" type="Node2D" parent="." unique_id=1680227892]
+
+[node name="hitzone_0" type="Area2D" parent="hitzones" unique_id=1065227867]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_0" unique_id=146066454]
+position = Vector2(326, 560)
+shape = SubResource("RectangleShape2D_1ujqu")
+
+[node name="hitzone_1" type="Area2D" parent="hitzones" unique_id=753527091]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_1" unique_id=1589480257]
+position = Vector2(426, 560)
+shape = SubResource("RectangleShape2D_1ujqu")
+
+[node name="hitzone_2" type="Area2D" parent="hitzones" unique_id=904423505]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_2" unique_id=1133826041]
+position = Vector2(626, 560)
+shape = SubResource("RectangleShape2D_1ujqu")
+
+[node name="hitzone_k" type="Area2D" parent="hitzones" unique_id=13035818]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_k" unique_id=804470931]
+position = Vector2(726, 560)
+shape = SubResource("RectangleShape2D_1ujqu")
+
+[node name="ui" type="CanvasLayer" parent="." unique_id=1703749798]
+
+[node name="Score" type="Label" parent="ui" unique_id=118745305]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Combo" type="Label" parent="ui" unique_id=1157792046]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Judge" type="Label" parent="ui" unique_id=705951380]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="notes" type="Node2D" parent="." unique_id=976526959]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=598602393]
+offset_top = 560.0
+offset_right = 1149.72
+offset_bottom = 570.0

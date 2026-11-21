@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.nlaha.godotmidi"
+type="MidiResource"
+uid="uid://bakc6f4qmmuhx"
+path="res://.godot/imported/Frozen - Let it Go.mid-80af7cf9fbdb13ac3d6c8510e63614c0.res"
+
+[deps]
+
+source_file="res://songs/Frozen - Let it Go.mid"
+dest_files=["res://.godot/imported/Frozen - Let it Go.mid-80af7cf9fbdb13ac3d6c8510e63614c0.res"]
+
+[params]
+
