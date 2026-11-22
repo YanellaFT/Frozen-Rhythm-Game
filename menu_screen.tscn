@@ -91,4 +91,6 @@ parameters/looping = true
 
 [connection signal="pressed" from="pickBtn" to="." method="_on_pick_btn_pressed"]
 [connection signal="pressed" from="pickBtn2" to="." method="_on_pick_btn_2_pressed"]
+[connection signal="pressed" from="pickBtn3" to="." method="_on_pick_btn_3_pressed"]
+[connection signal="pressed" from="pickBtn4" to="." method="_on_pick_btn_4_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
