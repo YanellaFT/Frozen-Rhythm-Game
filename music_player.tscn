@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d4dhttuor1wag"]
+
+[ext_resource type="AudioStream" uid="uid://dtyqif30jyq8s" path="res://songs/lobby_music.mp3" id="1_k4xj7"]
+[ext_resource type="Script" uid="uid://duon71mxauvyw" path="res://MusicPlayer.gd" id="2_p3pav"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=742598219]
+stream = ExtResource("1_k4xj7")
+autoplay = true
+script = ExtResource("2_p3pav")
