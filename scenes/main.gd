@@ -1,27 +1,8 @@
 extends Node2D
 
-#const LOWEST_NOTE = 45
-#const HIGHEST_NOTE = 99
-#if SongManager.selected_song == "SongOne":
-			#var LOWEST_NOTE = 45
-			#var HIGHEST_NOTE = 99
-			#var FALL_TIME = 1
-		#"SongTwo":
-			#var LOWEST_NOTE = 45
-			#var HIGHEST_NOTE = 99
-			#var FALL_TIME = 1
-		#"SongThree":
-			#var LOWEST_NOTE = 45
-			#var HIGHEST_NOTE = 99
-			#var FALL_TIME = 1
-		#"SongFour":
-			#mvar LOWEST_NOTE = 45
-			#var HIGHEST_NOTE = 99
-			#var FALL_TIME = 1
-
-const LANE_X = [500.0, 650.0, 650.0, 1000.0]
+const LANE_X = [450.0, 600.0, 800.0, 950.0]
 const SPAWN_Y = 100.0
-const HIT_Y = 700.0
+const HIT_Y = 765.0
 const PERFECT_PX = 20.0
 
 var note_scene := preload("res://scenes/note.tscn")
@@ -56,20 +37,17 @@ func _ready():
 			music.stream= load("res://songs/Snowman - Sia.mp3")
 			LOWEST_NOTE = 36
 			HIGHEST_NOTE = 90
-			FALL_TIME = 2
+			FALL_TIME = .9
 		"SongFour":
 			music.stream= load("res://songs/Jingle bells.mp3")
 			LOWEST_NOTE = 60
 			HIGHEST_NOTE = 70
-			FALL_TIME = 2.5
+			FALL_TIME = 1
 			
 	midi.note_offset = -FALL_TIME
 	midi.link_audio_stream_player([music])
 	midi.note.connect(_on_midi_note)
 	midi.play()
-		
-
-
 	
 func _on_midi_note(event, _track):
 	if event["subtype"] != MIDI_MESSAGE_NOTE_ON:
@@ -124,8 +102,6 @@ func register(result):
 	judge_label.text = result
 	score_label.text = "Score: %d" % score
 	combo_label.text = "Combo: %d" % combo if combo > 1 else ""
-
-
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://menu_screen.tscn")

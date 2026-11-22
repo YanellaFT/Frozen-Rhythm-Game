@@ -113,13 +113,14 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_7tdw8")
 metadata/_edit_use_anchors_ = true
 
 [node name="hearts" type="Node2D" parent="." unique_id=1739652790]
+position = Vector2(-44, -32)
 script = ExtResource("14_8sfkg")
 
 [node name="Panel" type="Panel" parent="hearts" unique_id=410716313]
-offset_left = 1219.0
-offset_top = 821.0
-offset_right = 1351.0
-offset_bottom = 930.0
+offset_left = 1227.0
+offset_top = 803.0
+offset_right = 1359.0
+offset_bottom = 912.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_fbpv5")
 metadata/_edit_use_anchors_ = true
 

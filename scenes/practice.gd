@@ -81,6 +81,5 @@ func register(result):
 	score_label.text = "Score: %d" % score
 	combo_label.text = "Combo: %d" % combo if combo > 1 else ""
 
-
 func _on_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://home_screen.tscn")

@@ -1,10 +1,14 @@
 [gd_scene format=4 uid="uid://dl6b1u84m7yvx"]
 
 [ext_resource type="Script" uid="uid://cjpl5dspsjjbb" path="res://scenes/main.gd" id="1_sugp2"]
-[ext_resource type="Texture2D" uid="uid://ba8msncqky3ha" path="res://img/game screen.png" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://bj5m54vpu5453" path="res://img/icecles.png" id="2_sugp2"]
+[ext_resource type="Texture2D" uid="uid://dkwbvysymvqgp" path="res://img/game screen (1).png" id="3_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://cblqxbrf5qssb" path="res://img/back btn.png" id="4_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://4cykn12ni5tn" path="res://img/back btn red.png" id="5_tefeu"]
+[ext_resource type="Script" uid="uid://d3fo1muoyyknv" path="res://scenes/hearts.gd" id="6_85g3d"]
+[ext_resource type="Texture2D" uid="uid://caq8fgswwewmh" path="res://img/hearts.png" id="7_choun"]
+[ext_resource type="Script" uid="uid://bs3euhio2fro3" path="res://scenes/exclamation.gd" id="8_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://24w7thwcrfa4" path="res://img/exclamations.png" id="9_eb6dy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6amyu"]
 texture = ExtResource("2_sugp2")
@@ -34104,7 +34108,7 @@ data = PackedByteArray("//vQBAAABexfwAU94AK8TlgGp7wAWjknSbm8gAM9Juj3NYAAIQhC7IOJ
 size = Vector2(80, 120)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ujqu"]
-texture = ExtResource("2_0wfyh")
+texture = ExtResource("3_tbgi4")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rw4b"]
 texture = ExtResource("4_tbgi4")
@@ -34112,15 +34116,21 @@ texture = ExtResource("4_tbgi4")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ew17x"]
 texture = ExtResource("5_tefeu")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trceg"]
+texture = ExtResource("7_choun")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8y0u"]
+texture = ExtResource("9_eb6dy")
+
 [node name="main" type="Node2D" unique_id=588996212]
 script = ExtResource("1_sugp2")
 
 [node name="icecles" type="Panel" parent="." unique_id=376697157]
 z_index = 1
-offset_left = 381.0
-offset_top = 58.0
-offset_right = 1109.0
-offset_bottom = 240.0
+offset_left = 326.0
+offset_top = 63.0
+offset_right = 1054.0
+offset_bottom = 245.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_6amyu")
 
 [node name="notes" type="Node2D" parent="." unique_id=976526959]
@@ -34136,25 +34146,25 @@ stream = SubResource("AudioStreamMP3_0wfyh")
 [node name="hitzone_0" type="Area2D" parent="hitzones" unique_id=1065227867]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_0" unique_id=146066454]
-position = Vector2(500, 700)
+position = Vector2(450, 765)
 shape = SubResource("RectangleShape2D_1ujqu")
 
 [node name="hitzone_1" type="Area2D" parent="hitzones" unique_id=753527091]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_1" unique_id=1589480257]
-position = Vector2(650, 700)
+position = Vector2(600, 765)
 shape = SubResource("RectangleShape2D_1ujqu")
 
 [node name="hitzone_2" type="Area2D" parent="hitzones" unique_id=904423505]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_2" unique_id=1133826041]
-position = Vector2(850, 700)
+position = Vector2(800, 765)
 shape = SubResource("RectangleShape2D_1ujqu")
 
 [node name="hitzone_k" type="Area2D" parent="hitzones" unique_id=13035818]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_k" unique_id=804470931]
-position = Vector2(1000, 700)
+position = Vector2(950, 765)
 shape = SubResource("RectangleShape2D_1ujqu")
 
 [node name="ui" type="CanvasLayer" parent="." unique_id=1703749798]
@@ -34185,10 +34195,10 @@ vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="ui" unique_id=598602393]
 visible = false
-offset_left = 31.0
-offset_top = 700.0
-offset_right = 1471.0
-offset_bottom = 710.0
+offset_left = 22.0
+offset_top = 765.0
+offset_right = 1462.0
+offset_bottom = 775.0
 
 [node name="Panel" type="Panel" parent="." unique_id=427729440]
 z_index = -1000
@@ -34204,5 +34214,27 @@ offset_right = 200.0
 offset_bottom = 105.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_5rw4b")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ew17x")
+
+[node name="hearts" type="Node2D" parent="." unique_id=1099263383]
+script = ExtResource("6_85g3d")
+
+[node name="Panel" type="Panel" parent="hearts" unique_id=2122132412]
+offset_left = 114.0
+offset_top = 784.0
+offset_right = 246.0
+offset_bottom = 893.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_trceg")
+metadata/_edit_use_anchors_ = true
+
+[node name="exclamation" type="Node2D" parent="." unique_id=1911365800]
+script = ExtResource("8_ya4ey")
+
+[node name="Panel" type="Panel" parent="exclamation" unique_id=739453355]
+offset_left = 1156.0
+offset_top = 120.0
+offset_right = 1364.0
+offset_bottom = 381.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a8y0u")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
