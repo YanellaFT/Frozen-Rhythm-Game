@@ -6,7 +6,7 @@ const HIT_Y = 765.0
 const PERFECT_PX = 20.0
 
 var note_scene := preload("res://scenes/note.tscn")
-var score := 0
+#var score := 0
 var combo := 0
 
 var LOWEST_NOTE = 0
@@ -48,6 +48,7 @@ func _ready():
 	midi.link_audio_stream_player([music])
 	midi.note.connect(_on_midi_note)
 	midi.play()
+	music.finished.connect(_on_music_finished)
 	
 func _on_midi_note(event, _track):
 	if event["subtype"] != MIDI_MESSAGE_NOTE_ON:
@@ -92,16 +93,19 @@ func _on_note_missed():
 func register(result):
 	match result:
 		"Perfect!":
-			score += 300
+			Globals.score += 300
 			combo += 1
 		"Good":
-			score += 100
+			Globals.score += 100
 			combo += 1
 		"Miss...":
 			combo = 0
 	judge_label.text = result
-	score_label.text = "Score: %d" % score
+	score_label.text = "Score: %d" % Globals.score
 	combo_label.text = "Combo: %d" % combo if combo > 1 else ""
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://menu_screen.tscn")
+	
+func _on_music_finished() -> void:
+	get_tree().change_scene_to_file("res://scenes/end_scene.tscn")

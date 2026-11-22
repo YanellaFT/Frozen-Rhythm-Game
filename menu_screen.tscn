@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://du3lafhjfmq2y" path="res://menu_screen.gd" id="1_0ft63"]
 [ext_resource type="Texture2D" uid="uid://gx460q5mbbpj" path="res://img/menu screen.png" id="1_ylmtb"]
-[ext_resource type="Texture2D" uid="uid://b5xtuqgci24yp" path="res://img/pick btn.png" id="2_0ft63"]
-[ext_resource type="Texture2D" uid="uid://c5b3f6ywo54b1" path="res://img/pick btn red.png" id="3_y8ko8"]
+[ext_resource type="Texture2D" uid="uid://dned6smokh6y8" path="res://img/play btn.png" id="3_x55ar"]
+[ext_resource type="Texture2D" uid="uid://b8hevyegbxpnd" path="res://img/play btn red.png" id="4_wdxbj"]
 [ext_resource type="Texture2D" uid="uid://cblqxbrf5qssb" path="res://img/back btn.png" id="5_qjfvo"]
 [ext_resource type="Texture2D" uid="uid://4cykn12ni5tn" path="res://img/back btn red.png" id="6_lfpg5"]
 [ext_resource type="Texture2D" uid="uid://dxt880urb6hkx" path="res://img/mute btn.png" id="8_g50d1"]
@@ -52,39 +52,44 @@ metadata/_edit_lock_ = true
 
 [node name="pickBtn" type="TextureButton" parent="." unique_id=523874113]
 layout_mode = 0
-offset_left = 494.0
-offset_top = 426.0
-offset_right = 619.0
-offset_bottom = 475.0
-texture_normal = ExtResource("2_0ft63")
-texture_hover = ExtResource("3_y8ko8")
+offset_left = 472.0
+offset_top = 422.00003
+offset_right = 684.0
+offset_bottom = 508.00003
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_x55ar")
+texture_hover = ExtResource("4_wdxbj")
+stretch_mode = 0
 
 [node name="pickBtn2" type="TextureButton" parent="." unique_id=351475537]
 layout_mode = 0
-offset_left = 831.0
-offset_top = 426.0
-offset_right = 956.0
-offset_bottom = 475.0
-texture_normal = ExtResource("2_0ft63")
-texture_hover = ExtResource("3_y8ko8")
+offset_left = 804.00006
+offset_top = 422.0
+offset_right = 1013.00006
+offset_bottom = 508.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_x55ar")
+texture_hover = ExtResource("4_wdxbj")
 
 [node name="pickBtn3" type="TextureButton" parent="." unique_id=1970657861]
 layout_mode = 0
-offset_left = 495.0
-offset_top = 833.0
-offset_right = 620.0
-offset_bottom = 882.0
-texture_normal = ExtResource("2_0ft63")
-texture_hover = ExtResource("3_y8ko8")
+offset_left = 477.0
+offset_top = 825.00006
+offset_right = 686.0
+offset_bottom = 911.00006
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_x55ar")
+texture_hover = ExtResource("4_wdxbj")
 
 [node name="pickBtn4" type="TextureButton" parent="." unique_id=1385460944]
 layout_mode = 0
-offset_left = 831.0
-offset_top = 833.0
-offset_right = 956.0
-offset_bottom = 882.0
-texture_normal = ExtResource("2_0ft63")
-texture_hover = ExtResource("3_y8ko8")
+offset_left = 820.0
+offset_top = 826.00006
+offset_right = 1029.0
+offset_bottom = 912.00006
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_x55ar")
+texture_hover = ExtResource("4_wdxbj")
 
 [node name="back" type="Button" parent="." unique_id=248688086]
 layout_mode = 0
