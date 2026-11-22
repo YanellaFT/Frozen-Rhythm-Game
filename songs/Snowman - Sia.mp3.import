@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cub4ub24oetc"
+path="res://.godot/imported/Snowman - Sia.mp3-bf32beb1363e12047af9f505e077b7a2.mp3str"
+
+[deps]
+
+source_file="res://songs/Snowman - Sia.mp3"
+dest_files=["res://.godot/imported/Snowman - Sia.mp3-bf32beb1363e12047af9f505e077b7a2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

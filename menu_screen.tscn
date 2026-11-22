@@ -48,16 +48,7 @@ offset_bottom = 475.0
 texture_normal = ExtResource("2_0ft63")
 texture_hover = ExtResource("3_y8ko8")
 
-[node name="pickBtn3" type="TextureButton" parent="." unique_id=1385460944]
-layout_mode = 0
-offset_left = 831.0
-offset_top = 833.0
-offset_right = 956.0
-offset_bottom = 882.0
-texture_normal = ExtResource("2_0ft63")
-texture_hover = ExtResource("3_y8ko8")
-
-[node name="pickBtn4" type="TextureButton" parent="." unique_id=1970657861]
+[node name="pickBtn3" type="TextureButton" parent="." unique_id=1970657861]
 layout_mode = 0
 offset_left = 495.0
 offset_top = 833.0
@@ -66,5 +57,16 @@ offset_bottom = 882.0
 texture_normal = ExtResource("2_0ft63")
 texture_hover = ExtResource("3_y8ko8")
 
+[node name="pickBtn4" type="TextureButton" parent="." unique_id=1385460944]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 833.0
+offset_right = 956.0
+offset_bottom = 882.0
+texture_normal = ExtResource("2_0ft63")
+texture_hover = ExtResource("3_y8ko8")
+
 [connection signal="pressed" from="pickBtn" to="." method="_on_pick_btn_pressed"]
 [connection signal="pressed" from="pickBtn2" to="." method="_on_pick_btn_2_pressed"]
+[connection signal="pressed" from="pickBtn3" to="." method="_on_pick_btn_3_pressed"]
+[connection signal="pressed" from="pickBtn4" to="." method="_on_pick_btn_4_pressed"]

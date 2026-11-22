@@ -22,6 +22,16 @@ var combo := 0
 @onready var judge_label = $ui/Judge
 
 func _ready():
+	match SongManager.selected_song:
+		"SongOne":
+			music.stream = load("res://songs/Frozen Heart (for reference).mp3")
+		"SongTwo":
+			music.stream = load("res://songs/Frozen - Let it Go.mp3")
+		"SongThree":
+			music.stream= load("res://songs/Snowman - Sia.mp3")
+		"SongFour":
+			music.stream= load("res://songs/Jingle bells.mp3")
+		
 	midi.note_offset = -FALL_TIME
 	midi.link_audio_stream_player([music])
 	midi.note.connect(_on_midi_note)
@@ -69,7 +79,7 @@ func _on_note_missed():
 
 func register(result):
 	match result:
-		"Percect!":
+		"Perfect!":
 			score += 300
 			combo += 1
 		"Good":
