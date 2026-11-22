@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://c5b3f6ywo54b1" path="res://img/pick btn red.png" id="3_y8ko8"]
 [ext_resource type="Texture2D" uid="uid://cblqxbrf5qssb" path="res://img/back btn.png" id="5_qjfvo"]
 [ext_resource type="Texture2D" uid="uid://4cykn12ni5tn" path="res://img/back btn red.png" id="6_lfpg5"]
-[ext_resource type="AudioStream" uid="uid://dtyqif30jyq8s" path="res://songs/lobby_music.mp3" id="7_lfpg5"]
 [ext_resource type="Texture2D" uid="uid://dxt880urb6hkx" path="res://img/mute btn.png" id="8_g50d1"]
 [ext_resource type="Texture2D" uid="uid://b11hb7edh1xyk" path="res://img/mute btn red.png" id="9_gvolf"]
 [ext_resource type="Script" uid="uid://bs3euhio2fro3" path="res://scenes/exclamation.gd" id="10_wdxbj"]
@@ -22,12 +21,6 @@ texture = ExtResource("5_qjfvo")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6amyu"]
 texture = ExtResource("6_lfpg5")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_csdst"]
-texture = ExtResource("8_g50d1")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x55ar"]
-texture = ExtResource("9_gvolf")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47w7x"]
 texture = ExtResource("11_4oumy")
@@ -102,19 +95,14 @@ offset_bottom = 91.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_1ujqu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6amyu")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=750300993]
-stream = ExtResource("7_lfpg5")
-autoplay = true
-parameters/looping = true
-
-[node name="Button" type="Button" parent="AudioStreamPlayer" unique_id=1099743141]
-offset_left = 1177.0
-offset_top = 49.0
-offset_right = 1373.0
-offset_bottom = 125.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_csdst")
-theme_override_styles/hover = SubResource("StyleBoxTexture_x55ar")
-metadata/_edit_use_anchors_ = true
+[node name="audioButton" type="TextureButton" parent="." unique_id=585519524]
+layout_mode = 0
+offset_left = 1208.0
+offset_top = 19.0
+offset_right = 1417.0
+offset_bottom = 105.0
+texture_normal = ExtResource("8_g50d1")
+texture_hover = ExtResource("9_gvolf")
 
 [node name="exclamation" type="Node2D" parent="." unique_id=906707394]
 script = ExtResource("10_wdxbj")
@@ -143,4 +131,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="pickBtn3" to="." method="_on_pick_btn_3_pressed"]
 [connection signal="pressed" from="pickBtn4" to="." method="_on_pick_btn_4_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="AudioStreamPlayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="audioButton" to="." method="_on_audio_button_pressed"]

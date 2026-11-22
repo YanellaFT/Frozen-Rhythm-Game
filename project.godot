@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Frozen Rhythm Game"
-run/main_scene="uid://rvkh6jyyfax3"
+run/main_scene="uid://dwgpjl4nshnt0"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 run/size/viewport_height=648
@@ -20,6 +20,7 @@ run/size/viewport_width=1052
 [autoload]
 
 SongManager="*uid://dxd572lfvkfky"
+MusicPlayer="*uid://d4dhttuor1wag"
 
 [display]
 

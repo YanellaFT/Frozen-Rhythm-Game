@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://rvkh6jyyfax3"]
+[gd_scene format=3 uid="uid://dwgpjl4nshnt0"]
 
 [ext_resource type="Script" uid="uid://b7ctal08ootte" path="res://home_screen.gd" id="1_o6h2m"]
 [ext_resource type="Texture2D" uid="uid://bp7hulhul5m7e" path="res://img/home screen.png" id="2_ckqhc"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://b8hevyegbxpnd" path="res://img/play btn red.png" id="6_s47f5"]
 [ext_resource type="Texture2D" uid="uid://dtnpie8jrmtf2" path="res://img/credits.png" id="7_ikjqu"]
 [ext_resource type="Texture2D" uid="uid://cirhvp5ospstk" path="res://img/credits red.png" id="8_4kdek"]
-[ext_resource type="AudioStream" uid="uid://dtyqif30jyq8s" path="res://songs/lobby_music.mp3" id="9_ckqhc"]
 [ext_resource type="Texture2D" uid="uid://dxt880urb6hkx" path="res://img/mute btn.png" id="10_1fxkl"]
 [ext_resource type="Texture2D" uid="uid://b11hb7edh1xyk" path="res://img/mute btn red.png" id="11_jh6v6"]
 [ext_resource type="Script" uid="uid://c3cy14ejk6jip" path="res://scenes/jitter_snowflake.gd" id="12_4kdek"]
@@ -36,12 +35,6 @@ texture = ExtResource("7_ikjqu")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ew17x"]
 texture = ExtResource("8_4kdek")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ckqhc"]
-texture = ExtResource("10_1fxkl")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2352u"]
-texture = ExtResource("11_jh6v6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7tdw8"]
 texture = ExtResource("13_whai3")
@@ -87,19 +80,14 @@ offset_bottom = 1005.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_5rw4b")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ew17x")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=700995966]
-stream = ExtResource("9_ckqhc")
-autoplay = true
-parameters/looping = true
-
-[node name="Button" type="Button" parent="AudioStreamPlayer" unique_id=616792815]
-offset_left = 1177.0
-offset_top = 49.0
-offset_right = 1373.0
-offset_bottom = 125.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_ckqhc")
-theme_override_styles/hover = SubResource("StyleBoxTexture_2352u")
-metadata/_edit_use_anchors_ = true
+[node name="audioButton" type="TextureButton" parent="." unique_id=1100369697]
+layout_mode = 0
+offset_left = 1209.0
+offset_top = 20.0
+offset_right = 1418.0
+offset_bottom = 106.0
+texture_normal = ExtResource("10_1fxkl")
+texture_hover = ExtResource("11_jh6v6")
 
 [node name="jitter snowflake" type="Node2D" parent="." unique_id=514156843]
 script = ExtResource("12_4kdek")
@@ -127,4 +115,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="control" to="." method="_on_control_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="AudioStreamPlayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="audioButton" to="." method="_on_audio_button_pressed"]
