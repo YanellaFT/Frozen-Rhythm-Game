@@ -4,7 +4,7 @@ This is a rhythm game made for anyone who wants to play!
 
 Theme: FROZEN
 
-**live demo:** [here!](https://booleanbunny14.itch.io/beat-frozen)
+**live demo:** [here!](https://booleanbunny14.itch.io/beat-freeze)
 
 **built by:** Manu (@manognamakkena) and Yanella (@yanellaft)
 
@@ -14,7 +14,7 @@ Theme: FROZEN
 
 ## how to use
 
-Go to [this link](https://booleanbunny14.itch.io/beat-frozen) and download the files
+Go to [this link](https://booleanbunny14.itch.io/beat-freeze) and download the files
 
 Press play once it opens and enjoy!
 
