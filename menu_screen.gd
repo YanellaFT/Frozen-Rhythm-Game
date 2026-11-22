@@ -13,13 +13,8 @@ func _on_pick_btn_pressed() -> void:
 	SongManager.selected_song="SongOne"
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 func _on_pick_btn_2_pressed() -> void:
-	SongManager.selected_song="SongTwo"
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	get_tree().change_scene_to_file("res://menu_screen.tscn")
 
-func _on_pick_btn_3_pressed() -> void:
-	SongManager.selected_song="SongThree"
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
-func _on_pick_btn_4_pressed() -> void:
-	SongManager.selected_song="SongFour"
-	get_tree().change_scene_to_file("res://scenes/main.tscn") # Replace with function body.
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://home_screen.tscn")

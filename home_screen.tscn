@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b8hevyegbxpnd" path="res://img/play btn red.png" id="6_s47f5"]
 [ext_resource type="Texture2D" uid="uid://dtnpie8jrmtf2" path="res://img/credits.png" id="7_ikjqu"]
 [ext_resource type="Texture2D" uid="uid://cirhvp5ospstk" path="res://img/credits red.png" id="8_4kdek"]
+[ext_resource type="AudioStream" uid="uid://dtyqif30jyq8s" path="res://songs/lobby_music.mp3" id="9_ckqhc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ujqu"]
 texture = ExtResource("2_ckqhc")
@@ -67,6 +68,11 @@ offset_right = 1406.0
 offset_bottom = 1005.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_5rw4b")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ew17x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=700995966]
+stream = ExtResource("9_ckqhc")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="control" to="." method="_on_control_pressed"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
