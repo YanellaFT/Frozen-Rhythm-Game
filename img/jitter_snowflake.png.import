@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkwspegr4e360"
-path="res://.godot/imported/exclamation.png-79f9ca37bb0ba5b128a8bfb9edb68093.ctex"
+uid="uid://dglrued030nih"
+path="res://.godot/imported/jitter_snowflake.png-12f41218b1e2b46267d6f11ed5114631.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/exclamation.png"
-dest_files=["res://.godot/imported/exclamation.png-79f9ca37bb0ba5b128a8bfb9edb68093.ctex"]
+source_file="res://img/jitter_snowflake.png"
+dest_files=["res://.godot/imported/jitter_snowflake.png-12f41218b1e2b46267d6f11ed5114631.ctex"]
 
 [params]
 

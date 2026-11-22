@@ -9,6 +9,10 @@
 [ext_resource type="AudioStream" uid="uid://dtyqif30jyq8s" path="res://songs/lobby_music.mp3" id="7_lfpg5"]
 [ext_resource type="Texture2D" uid="uid://dxt880urb6hkx" path="res://img/mute btn.png" id="8_g50d1"]
 [ext_resource type="Texture2D" uid="uid://b11hb7edh1xyk" path="res://img/mute btn red.png" id="9_gvolf"]
+[ext_resource type="Script" uid="uid://bs3euhio2fro3" path="res://scenes/exclamation.gd" id="10_wdxbj"]
+[ext_resource type="Texture2D" uid="uid://24w7thwcrfa4" path="res://img/exclamations.png" id="11_4oumy"]
+[ext_resource type="Script" uid="uid://d3fo1muoyyknv" path="res://scenes/hearts.gd" id="12_rpstb"]
+[ext_resource type="Texture2D" uid="uid://caq8fgswwewmh" path="res://img/hearts.png" id="13_f36hj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gx7pf"]
 texture = ExtResource("1_ylmtb")
@@ -24,6 +28,12 @@ texture = ExtResource("8_g50d1")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x55ar"]
 texture = ExtResource("9_gvolf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47w7x"]
+texture = ExtResource("11_4oumy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6k5h"]
+texture = ExtResource("13_f36hj")
 
 [node name="Menu Screen" type="Control" unique_id=1208987248]
 layout_mode = 3
@@ -85,9 +95,9 @@ texture_hover = ExtResource("3_y8ko8")
 
 [node name="back" type="Button" parent="." unique_id=248688086]
 layout_mode = 0
-offset_left = 26.0
+offset_left = 25.0
 offset_top = 36.0
-offset_right = 151.0
+offset_right = 181.0
 offset_bottom = 91.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_1ujqu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6amyu")
@@ -104,6 +114,28 @@ offset_right = 1373.0
 offset_bottom = 125.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_csdst")
 theme_override_styles/hover = SubResource("StyleBoxTexture_x55ar")
+metadata/_edit_use_anchors_ = true
+
+[node name="exclamation" type="Node2D" parent="." unique_id=906707394]
+script = ExtResource("10_wdxbj")
+
+[node name="Panel" type="Panel" parent="exclamation" unique_id=939694992]
+offset_left = 95.0
+offset_top = 190.0
+offset_right = 303.0
+offset_bottom = 451.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_47w7x")
+metadata/_edit_use_anchors_ = true
+
+[node name="hearts" type="Node2D" parent="." unique_id=170906475]
+script = ExtResource("12_rpstb")
+
+[node name="Panel" type="Panel" parent="hearts" unique_id=911070963]
+offset_left = 1176.0
+offset_top = 689.0
+offset_right = 1308.0
+offset_bottom = 798.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_x6k5h")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="pickBtn" to="." method="_on_pick_btn_pressed"]

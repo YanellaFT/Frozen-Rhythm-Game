@@ -34199,9 +34199,9 @@ metadata/_edit_lock_ = true
 
 [node name="back" type="Button" parent="." unique_id=1241111021]
 offset_left = 44.0
-offset_top = 36.0
+offset_top = 44.0
 offset_right = 200.0
-offset_bottom = 97.0
+offset_bottom = 105.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_5rw4b")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ew17x")
 
