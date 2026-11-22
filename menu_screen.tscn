@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b2gmexltyqg8u"]
+
+[ext_resource type="Script" uid="uid://du3lafhjfmq2y" path="res://menu_screen.gd" id="1_0ft63"]
+[ext_resource type="Texture2D" uid="uid://gx460q5mbbpj" path="res://img/menu screen.png" id="1_ylmtb"]
+[ext_resource type="Texture2D" uid="uid://b5xtuqgci24yp" path="res://img/pick btn.png" id="2_0ft63"]
+[ext_resource type="Texture2D" uid="uid://c5b3f6ywo54b1" path="res://img/pick btn red.png" id="3_y8ko8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gx7pf"]
+texture = ExtResource("1_ylmtb")
+
+[node name="Menu Screen" type="Control" unique_id=1208987248]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = 16.0
+offset_right = -5.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ft63")
+
+[node name="Panel" type="Panel" parent="." unique_id=213301175]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -14.0
+offset_right = 1445.0
+offset_bottom = 1011.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gx7pf")
+metadata/_edit_lock_ = true
+
+[node name="pickBtn" type="TextureButton" parent="." unique_id=523874113]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 426.0
+offset_right = 619.0
+offset_bottom = 475.0
+texture_normal = ExtResource("2_0ft63")
+texture_hover = ExtResource("3_y8ko8")
+
+[node name="pickBtn2" type="TextureButton" parent="." unique_id=351475537]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 426.0
+offset_right = 956.0
+offset_bottom = 475.0
+texture_normal = ExtResource("2_0ft63")
+texture_hover = ExtResource("3_y8ko8")
+
+[node name="pickBtn3" type="TextureButton" parent="." unique_id=1385460944]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 833.0
+offset_right = 956.0
+offset_bottom = 882.0
+texture_normal = ExtResource("2_0ft63")
+texture_hover = ExtResource("3_y8ko8")
+
+[node name="pickBtn4" type="TextureButton" parent="." unique_id=1970657861]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 833.0
+offset_right = 620.0
+offset_bottom = 882.0
+texture_normal = ExtResource("2_0ft63")
+texture_hover = ExtResource("3_y8ko8")
+
+[connection signal="pressed" from="pickBtn" to="." method="_on_pick_btn_pressed"]
+[connection signal="pressed" from="pickBtn2" to="." method="_on_pick_btn_2_pressed"]
