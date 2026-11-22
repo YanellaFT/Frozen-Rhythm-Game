@@ -1,6 +1,13 @@
 [gd_scene format=4 uid="uid://dl6b1u84m7yvx"]
 
 [ext_resource type="Script" uid="uid://cjpl5dspsjjbb" path="res://scenes/main.gd" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://ba8msncqky3ha" path="res://img/game screen.png" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://bj5m54vpu5453" path="res://img/icecles.png" id="2_sugp2"]
+[ext_resource type="Texture2D" uid="uid://cblqxbrf5qssb" path="res://img/back btn.png" id="4_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://4cykn12ni5tn" path="res://img/back btn red.png" id="5_tefeu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6amyu"]
+texture = ExtResource("2_sugp2")
 
 [sub_resource type="MidiResource" id="MidiResource_o5qli"]
 format = 1
@@ -34096,8 +34103,27 @@ data = PackedByteArray("//vQBAAABexfwAU94AK8TlgGp7wAWjknSbm8gAM9Juj3NYAAIQhC7IOJ
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ujqu"]
 size = Vector2(80, 120)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ujqu"]
+texture = ExtResource("2_0wfyh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rw4b"]
+texture = ExtResource("4_tbgi4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ew17x"]
+texture = ExtResource("5_tefeu")
+
 [node name="main" type="Node2D" unique_id=588996212]
 script = ExtResource("1_sugp2")
+
+[node name="icecles" type="Panel" parent="." unique_id=376697157]
+z_index = 1
+offset_left = 381.0
+offset_top = 58.0
+offset_right = 1109.0
+offset_bottom = 240.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6amyu")
+
+[node name="notes" type="Node2D" parent="." unique_id=976526959]
 
 [node name="MidiPlayer" type="MidiPlayer" parent="." unique_id=235382925]
 midi = SubResource("MidiResource_o5qli")
@@ -34110,25 +34136,25 @@ stream = SubResource("AudioStreamMP3_0wfyh")
 [node name="hitzone_0" type="Area2D" parent="hitzones" unique_id=1065227867]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_0" unique_id=146066454]
-position = Vector2(326, 800)
+position = Vector2(500, 700)
 shape = SubResource("RectangleShape2D_1ujqu")
 
 [node name="hitzone_1" type="Area2D" parent="hitzones" unique_id=753527091]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_1" unique_id=1589480257]
-position = Vector2(426, 800)
+position = Vector2(650, 700)
 shape = SubResource("RectangleShape2D_1ujqu")
 
 [node name="hitzone_2" type="Area2D" parent="hitzones" unique_id=904423505]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_2" unique_id=1133826041]
-position = Vector2(626, 800)
+position = Vector2(850, 700)
 shape = SubResource("RectangleShape2D_1ujqu")
 
 [node name="hitzone_k" type="Area2D" parent="hitzones" unique_id=13035818]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_k" unique_id=804470931]
-position = Vector2(726, 800)
+position = Vector2(1000, 700)
 shape = SubResource("RectangleShape2D_1ujqu")
 
 [node name="ui" type="CanvasLayer" parent="." unique_id=1703749798]
@@ -34157,9 +34183,26 @@ offset_bottom = 524.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="notes" type="Node2D" parent="." unique_id=976526959]
+[node name="ColorRect" type="ColorRect" parent="ui" unique_id=598602393]
+visible = false
+offset_left = 31.0
+offset_top = 700.0
+offset_right = 1471.0
+offset_bottom = 710.0
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=598602393]
-offset_top = 800.0
+[node name="Panel" type="Panel" parent="." unique_id=427729440]
+z_index = -1000
 offset_right = 1440.0
-offset_bottom = 810.0
+offset_bottom = 1024.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1ujqu")
+metadata/_edit_lock_ = true
+
+[node name="back" type="Button" parent="." unique_id=1241111021]
+offset_left = 44.0
+offset_top = 36.0
+offset_right = 200.0
+offset_bottom = 97.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_5rw4b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ew17x")
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

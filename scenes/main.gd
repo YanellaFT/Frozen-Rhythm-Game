@@ -1,17 +1,36 @@
 extends Node2D
 
-const LOWEST_NOTE = 45
-const HIGHEST_NOTE = 99
+#const LOWEST_NOTE = 45
+#const HIGHEST_NOTE = 99
+#if SongManager.selected_song == "SongOne":
+			#var LOWEST_NOTE = 45
+			#var HIGHEST_NOTE = 99
+			#var FALL_TIME = 1
+		#"SongTwo":
+			#var LOWEST_NOTE = 45
+			#var HIGHEST_NOTE = 99
+			#var FALL_TIME = 1
+		#"SongThree":
+			#var LOWEST_NOTE = 45
+			#var HIGHEST_NOTE = 99
+			#var FALL_TIME = 1
+		#"SongFour":
+			#mvar LOWEST_NOTE = 45
+			#var HIGHEST_NOTE = 99
+			#var FALL_TIME = 1
 
-const LANE_X = [326.0, 426.0, 626.0, 726.0]
-const SPAWN_Y = -50.0
-const HIT_Y = 800.0
-const FALL_TIME = 2.0
+const LANE_X = [500.0, 650.0, 650.0, 1000.0]
+const SPAWN_Y = 100.0
+const HIT_Y = 700.0
 const PERFECT_PX = 20.0
 
 var note_scene := preload("res://scenes/note.tscn")
 var score := 0
 var combo := 0
+
+var LOWEST_NOTE = 0
+var HIGHEST_NOTE = 0
+var FALL_TIME = 0
 
 @onready var midi = $MidiPlayer
 @onready var music = $AudioStreamPlayer
@@ -25,17 +44,32 @@ func _ready():
 	match SongManager.selected_song:
 		"SongOne":
 			music.stream = load("res://songs/Frozen Heart (for reference).mp3")
+			LOWEST_NOTE = 48
+			HIGHEST_NOTE = 77
+			FALL_TIME = 2
 		"SongTwo":
 			music.stream = load("res://songs/Frozen - Let it Go.mp3")
+			LOWEST_NOTE = 58
+			HIGHEST_NOTE = 70
+			FALL_TIME = 1.75
 		"SongThree":
 			music.stream= load("res://songs/Snowman - Sia.mp3")
+			LOWEST_NOTE = 36
+			HIGHEST_NOTE = 90
+			FALL_TIME = 2
 		"SongFour":
 			music.stream= load("res://songs/Jingle bells.mp3")
-		
+			LOWEST_NOTE = 60
+			HIGHEST_NOTE = 70
+			FALL_TIME = 2.5
+			
 	midi.note_offset = -FALL_TIME
 	midi.link_audio_stream_player([music])
 	midi.note.connect(_on_midi_note)
 	midi.play()
+		
+
+
 	
 func _on_midi_note(event, _track):
 	if event["subtype"] != MIDI_MESSAGE_NOTE_ON:
@@ -90,3 +124,8 @@ func register(result):
 	judge_label.text = result
 	score_label.text = "Score: %d" % score
 	combo_label.text = "Combo: %d" % combo if combo > 1 else ""
+
+
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://menu_screen.tscn")

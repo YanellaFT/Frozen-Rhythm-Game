@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cblqxbrf5qssb" path="res://img/back btn.png" id="5_qjfvo"]
 [ext_resource type="Texture2D" uid="uid://4cykn12ni5tn" path="res://img/back btn red.png" id="6_lfpg5"]
 [ext_resource type="AudioStream" uid="uid://dtyqif30jyq8s" path="res://songs/lobby_music.mp3" id="7_lfpg5"]
+[ext_resource type="Texture2D" uid="uid://dxt880urb6hkx" path="res://img/mute btn.png" id="8_g50d1"]
+[ext_resource type="Texture2D" uid="uid://b11hb7edh1xyk" path="res://img/mute btn red.png" id="9_gvolf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gx7pf"]
 texture = ExtResource("1_ylmtb")
@@ -16,6 +18,12 @@ texture = ExtResource("5_qjfvo")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6amyu"]
 texture = ExtResource("6_lfpg5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_csdst"]
+texture = ExtResource("8_g50d1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x55ar"]
+texture = ExtResource("9_gvolf")
 
 [node name="Menu Screen" type="Control" unique_id=1208987248]
 layout_mode = 3
@@ -77,20 +85,30 @@ texture_hover = ExtResource("3_y8ko8")
 
 [node name="back" type="Button" parent="." unique_id=248688086]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 27.0
-offset_right = 150.0
-offset_bottom = 68.0
+offset_left = 26.0
+offset_top = 36.0
+offset_right = 151.0
+offset_bottom = 91.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_1ujqu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6amyu")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1850919877]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=750300993]
 stream = ExtResource("7_lfpg5")
 autoplay = true
 parameters/looping = true
+
+[node name="Button" type="Button" parent="AudioStreamPlayer" unique_id=1099743141]
+offset_left = 1177.0
+offset_top = 49.0
+offset_right = 1373.0
+offset_bottom = 125.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_csdst")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x55ar")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="pickBtn" to="." method="_on_pick_btn_pressed"]
 [connection signal="pressed" from="pickBtn2" to="." method="_on_pick_btn_2_pressed"]
 [connection signal="pressed" from="pickBtn3" to="." method="_on_pick_btn_3_pressed"]
 [connection signal="pressed" from="pickBtn4" to="." method="_on_pick_btn_4_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="AudioStreamPlayer/Button" to="." method="_on_button_pressed"]
