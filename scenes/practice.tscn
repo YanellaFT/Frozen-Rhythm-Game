@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://dn15qkhibfdoq"]
+
+[ext_resource type="Script" uid="uid://be6gn1xesm1od" path="res://scenes/practice.gd" id="1_040y0"]
+[ext_resource type="Texture2D" uid="uid://cs0wng0fxnomy" path="res://img/control screen.png" id="2_3upoe"]
+[ext_resource type="MidiResource" uid="uid://bw7aab7c1kmwx" path="res://songs/practice.mid" id="3_as53i"]
+[ext_resource type="AudioStream" uid="uid://d33k5t1odnui7" path="res://songs/practice.mp3" id="4_p81i7"]
+[ext_resource type="Texture2D" uid="uid://cmdnt70ssrefv" path="res://img/x.png" id="5_so6cb"]
+[ext_resource type="Texture2D" uid="uid://81auwyxfsmxu" path="res://img/x red.png" id="6_4t17g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ujqu"]
+texture = ExtResource("2_3upoe")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as53i"]
+size = Vector2(80, 120)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6amyu"]
+texture = ExtResource("5_so6cb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_as53i"]
+texture = ExtResource("6_4t17g")
+
+[node name="practice" type="Node2D" unique_id=1370904682]
+script = ExtResource("1_040y0")
+
+[node name="Panel" type="Panel" parent="." unique_id=1750489200]
+offset_right = 1440.0
+offset_bottom = 1024.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1ujqu")
+
+[node name="MidiPlayer" type="MidiPlayer" parent="." unique_id=1317956593]
+midi = ExtResource("3_as53i")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1475361648]
+stream = ExtResource("4_p81i7")
+
+[node name="hitzones" type="Node2D" parent="." unique_id=1103065406]
+
+[node name="hitzone_0" type="Area2D" parent="hitzones" unique_id=1015692967]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_0" unique_id=1186028987]
+position = Vector2(567, 670)
+shape = SubResource("RectangleShape2D_as53i")
+
+[node name="hitzone_1" type="Area2D" parent="hitzones" unique_id=87720940]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_1" unique_id=1321092207]
+position = Vector2(669, 671)
+shape = SubResource("RectangleShape2D_as53i")
+
+[node name="hitzone_2" type="Area2D" parent="hitzones" unique_id=1762597176]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_2" unique_id=269668307]
+position = Vector2(771, 670)
+shape = SubResource("RectangleShape2D_as53i")
+
+[node name="hitzone_k" type="Area2D" parent="hitzones" unique_id=72977973]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitzones/hitzone_k" unique_id=912972649]
+position = Vector2(873, 670)
+shape = SubResource("RectangleShape2D_as53i")
+
+[node name="ui" type="CanvasLayer" parent="." unique_id=950825717]
+
+[node name="Score" type="Label" parent="ui" unique_id=1523371437]
+offset_left = 1006.0
+offset_top = 7.0
+offset_right = 1421.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Combo" type="Label" parent="ui" unique_id=2021048191]
+offset_left = 598.0
+offset_top = 234.0
+offset_right = 845.0
+offset_bottom = 303.0
+theme_override_colors/font_color = Color(0.72156864, 0.12941177, 0.3372549, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Judge" type="Label" parent="ui" unique_id=135628272]
+offset_left = 621.0
+offset_top = 733.0
+offset_right = 818.0
+offset_bottom = 802.0
+theme_override_colors/font_color = Color(0.72156864, 0.12941177, 0.3372549, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="notes" type="Node2D" parent="." unique_id=1591957402]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=857342559]
+offset_top = 670.0
+offset_right = 1440.0
+offset_bottom = 680.0
+color = Color(0.72156864, 0.12941177, 0.3372549, 1)
+
+[node name="exit" type="Button" parent="." unique_id=1386289365]
+offset_left = 1041.0
+offset_top = 245.0
+offset_right = 1093.0
+offset_bottom = 296.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_6amyu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_as53i")
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.nlaha.godotmidi"
+type="MidiResource"
+uid="uid://bw7aab7c1kmwx"
+path="res://.godot/imported/practice.mid-84be998ad688417f4be066e3751c9eb3.res"
+
+[deps]
+
+source_file="res://songs/practice.mid"
+dest_files=["res://.godot/imported/practice.mid-84be998ad688417f4be066e3751c9eb3.res"]
+
+[params]
+
