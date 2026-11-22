@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nqt10jt4qq72"
+path="res://.godot/imported/Frozen Heart (for reference).mp3-3fd53cd4426192755ac8ab283ee332cc.mp3str"
+
+[deps]
+
+source_file="res://songs/Frozen Heart (for reference).mp3"
+dest_files=["res://.godot/imported/Frozen Heart (for reference).mp3-3fd53cd4426192755ac8ab283ee332cc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

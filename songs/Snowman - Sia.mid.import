@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.nlaha.godotmidi"
+type="MidiResource"
+uid="uid://bjkdg136kx57u"
+path="res://.godot/imported/Snowman - Sia.mid-362fee8503b586217460f1dc1e137b42.res"
+
+[deps]
+
+source_file="res://songs/Snowman - Sia.mid"
+dest_files=["res://.godot/imported/Snowman - Sia.mid-362fee8503b586217460f1dc1e137b42.res"]
+
+[params]
+

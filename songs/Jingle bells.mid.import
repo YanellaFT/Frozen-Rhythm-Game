@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.nlaha.godotmidi"
+type="MidiResource"
+uid="uid://ji56ggmqhvdn"
+path="res://.godot/imported/Jingle bells.mid-474cf9ed68a72853aae4c4d4d9abe430.res"
+
+[deps]
+
+source_file="res://songs/Jingle bells.mid"
+dest_files=["res://.godot/imported/Jingle bells.mid-474cf9ed68a72853aae4c4d4d9abe430.res"]
+
+[params]
+

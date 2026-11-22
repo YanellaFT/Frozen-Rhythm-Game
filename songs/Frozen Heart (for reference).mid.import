@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.nlaha.godotmidi"
+type="MidiResource"
+uid="uid://ci08cp0qgktc0"
+path="res://.godot/imported/Frozen Heart (for reference).mid-e0bd5dae19b88b48d230bdd0da181a30.res"
+
+[deps]
+
+source_file="res://songs/Frozen Heart (for reference).mid"
+dest_files=["res://.godot/imported/Frozen Heart (for reference).mid-e0bd5dae19b88b48d230bdd0da181a30.res"]
+
+[params]
+

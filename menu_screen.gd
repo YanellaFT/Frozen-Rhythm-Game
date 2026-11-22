@@ -10,8 +10,8 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pick_btn_pressed() -> void:
-	pass
-
+	SongManager.selected_song="SongOne"
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 func _on_pick_btn_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://menu_screen.tscn")
 

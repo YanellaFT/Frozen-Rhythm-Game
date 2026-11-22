@@ -57,20 +57,20 @@ offset_bottom = 475.0
 texture_normal = ExtResource("2_0ft63")
 texture_hover = ExtResource("3_y8ko8")
 
-[node name="pickBtn3" type="TextureButton" parent="." unique_id=1385460944]
-layout_mode = 0
-offset_left = 831.0
-offset_top = 833.0
-offset_right = 956.0
-offset_bottom = 882.0
-texture_normal = ExtResource("2_0ft63")
-texture_hover = ExtResource("3_y8ko8")
-
-[node name="pickBtn4" type="TextureButton" parent="." unique_id=1970657861]
+[node name="pickBtn3" type="TextureButton" parent="." unique_id=1970657861]
 layout_mode = 0
 offset_left = 495.0
 offset_top = 833.0
 offset_right = 620.0
+offset_bottom = 882.0
+texture_normal = ExtResource("2_0ft63")
+texture_hover = ExtResource("3_y8ko8")
+
+[node name="pickBtn4" type="TextureButton" parent="." unique_id=1385460944]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 833.0
+offset_right = 956.0
 offset_bottom = 882.0
 texture_normal = ExtResource("2_0ft63")
 texture_hover = ExtResource("3_y8ko8")
