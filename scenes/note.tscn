@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://t75vgb821soj"]
 
 [ext_resource type="Script" uid="uid://bpkiqndqog7os" path="res://scenes/note.gd" id="1_t3yvt"]
+[ext_resource type="Texture2D" uid="uid://b5khar7s5oqrp" path="res://img/snowflake.png" id="2_1bnk6"]
+
+[sub_resource type="Theme" id="Theme_o6h2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ujqu"]
 size = Vector2(80, 80)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6amyu"]
+texture = ExtResource("2_1bnk6")
 
 [node name="Note" type="Area2D" unique_id=1550997043]
 script = ExtResource("1_t3yvt")
@@ -13,6 +19,15 @@ offset_left = -40.0
 offset_top = -40.0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = SubResource("Theme_o6h2m")
+color = Color(1, 1, 1, 0.078431375)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1591993952]
 shape = SubResource("RectangleShape2D_1ujqu")
+
+[node name="Panel" type="Panel" parent="." unique_id=688943132]
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6amyu")

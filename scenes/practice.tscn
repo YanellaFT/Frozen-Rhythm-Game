@@ -2,13 +2,466 @@
 
 [ext_resource type="Script" uid="uid://be6gn1xesm1od" path="res://scenes/practice.gd" id="1_040y0"]
 [ext_resource type="Texture2D" uid="uid://cs0wng0fxnomy" path="res://img/control screen.png" id="2_3upoe"]
-[ext_resource type="MidiResource" uid="uid://bw7aab7c1kmwx" path="res://songs/practice.mid" id="3_as53i"]
-[ext_resource type="AudioStream" uid="uid://d33k5t1odnui7" path="res://songs/practice.mp3" id="4_p81i7"]
+[ext_resource type="AudioStream" uid="uid://cwy3yibasccfs" path="res://songs/practice1.mp3" id="3_p81i7"]
 [ext_resource type="Texture2D" uid="uid://cmdnt70ssrefv" path="res://img/x.png" id="5_so6cb"]
 [ext_resource type="Texture2D" uid="uid://81auwyxfsmxu" path="res://img/x red.png" id="6_4t17g"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ujqu"]
 texture = ExtResource("2_3upoe")
+
+[sub_resource type="MidiResource" id="MidiResource_so6cb"]
+format = -1983983936
+track_count = 1
+division = 384
+division_type = 114
+smpte_fps = 0
+smpte_ticks_per_frame = 0
+tempo = 500000
+tracks = [{
+"events": [{
+"channel": 0,
+"data": {
+"clocks_per_tick": 24,
+"denominator": 4,
+"num_32nd_notes_per_quarter": 8,
+"numerator": 4
+},
+"delta": 0.0,
+"subtype": 88,
+"track": 0,
+"type": "meta"
+}, {
+"channel": 0,
+"data": 545454,
+"delta": 0.0,
+"subtype": 81,
+"track": 0,
+"type": "meta"
+}, {
+"channel": 0,
+"data": "Electric Piano",
+"delta": 0.0,
+"subtype": 3,
+"track": 0,
+"type": "meta"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 5,
+"subtype": 12,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 58,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 62,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 65,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 70,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 46,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 768.0,
+"note": 70,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 65,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 62,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 58,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 58,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 62,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 65,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 70,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 768.0,
+"note": 70,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 65,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 62,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 58,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 58,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 58,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 57,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 57,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 55,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 55,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 53,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 53,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 51,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 51,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 53,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 53,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 55,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 55,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 57,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 57,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 58,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 58,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 384.0,
+"note": 58,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 63,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 63,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 58,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 63,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 66,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 66,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 63,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 66,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 0.0,
+"note": 70,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 384.0,
+"note": 70,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 0.0,
+"note": 66,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 50,
+"delta": 384.0,
+"note": 70,
+"subtype": 9,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 768.0,
+"note": 70,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": 0,
+"delta": 864.0,
+"note": 46,
+"subtype": 8,
+"track": 0,
+"type": "note"
+}, {
+"channel": 0,
+"data": true,
+"delta": 0.0,
+"subtype": 47,
+"track": 0,
+"type": "meta"
+}],
+"name": "Electric Piano"
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_as53i"]
 size = Vector2(80, 120)
@@ -28,10 +481,10 @@ offset_bottom = 1024.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_1ujqu")
 
 [node name="MidiPlayer" type="MidiPlayer" parent="." unique_id=1317956593]
-midi = ExtResource("3_as53i")
+midi = SubResource("MidiResource_so6cb")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1475361648]
-stream = ExtResource("4_p81i7")
+stream = ExtResource("3_p81i7")
 
 [node name="hitzones" type="Node2D" parent="." unique_id=1103065406]
 
@@ -93,8 +546,9 @@ vertical_alignment = 1
 [node name="notes" type="Node2D" parent="." unique_id=1591957402]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=857342559]
+offset_left = 329.0
 offset_top = 670.0
-offset_right = 1440.0
+offset_right = 1110.0
 offset_bottom = 680.0
 color = Color(0.72156864, 0.12941177, 0.3372549, 1)
 

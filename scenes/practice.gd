@@ -1,12 +1,12 @@
 extends Node2D
 
 const LOWEST_NOTE = 55
-const HIGHEST_NOTE = 70
+const HIGHEST_NOTE = 65
 
 const LANE_X = [567.0, 669.0, 771.0, 873.0]
 const SPAWN_Y = 50.0
 const HIT_Y = 670.0
-const FALL_TIME = 2.0
+const FALL_TIME = 1.5
 const PERFECT_PX = 20.0
 
 var note_scene := preload("res://scenes/note.tscn")
